@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,7 @@ Route::post('/', [HomeController::class, 'index_message']);
 
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/contact', [HomeController::class, 'contact']);
+
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/create_product', [ProductController::class, 'create']);
+Route::post('/store_product', [ProductController::class, 'store']);

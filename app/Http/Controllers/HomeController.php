@@ -3,18 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index($message = "", $phone_num = "")
     {
-        $urls = ["about_url" => "./about", "contact_url" => "./contact"];
+        $urls = [
+            "about_url" => "./about",
+            "contact_url" => "./contact",
+            "products_url" => "./products",
+            "create_product_url" => "./create_product"
+        ];
 
         return view('home',
             [
                 "about_url" => $urls["about_url"],
                 "contact_url" => $urls["contact_url"],
+                "products_url" => $urls["products_url"],
+                "create_product_url" => $urls["create_product_url"],
                 "message" => $message,
                 "phone_num" => $phone_num
             ]

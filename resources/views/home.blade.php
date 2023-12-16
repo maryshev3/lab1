@@ -12,6 +12,8 @@
         <p>Ссылки на другие страницы:</p>
         <a href={{$about_url}}>О нас</a>
         <a href={{$contact_url}}>Контакты</a>
+        <a href={{$products_url}}>Посмотреть продукты</a>
+        <a href={{$create_product_url}}>Создать продукт</a>
     </div>
 
     @if($message != "" && $phone_num != "")
